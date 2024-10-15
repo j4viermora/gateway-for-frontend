@@ -4,13 +4,18 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <div>
+    <router-view></router-view>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
-    <a href="http://localhost:3000/v2">Ir a vue</a>
+    <a href="http://localhost:3000/v2">Ir a svelte</a>
+    <nav>
+      <router-link style="cursor: pointer;" to="/">Home</router-link> |
+      <router-link style="cursor: pointer;" to="/about">About</router-link>
+    </nav>
   </div>
   <HelloWorld msg="Vite + Vue" />
 </template>

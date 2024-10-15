@@ -37,21 +37,7 @@ const svelteProxy = createProxyMiddleware({
   }
 });
 
-const svelteAssetsProxy = createProxyMiddleware({
-    target: "http://localhost:3002/v2/assets",
-    changeOrigin: true,
-    // pathRewrite: {
-    //   "^/v2": "",
-    // },
-    on: {
-      proxyRes: function (proxyRes: any, req: any, res: any) {
-        proxyRes.headers["Access-Control-Allow-Origin"] = "*";
-      },
-    }
-});
 
-// Rutas
-app.use('/v2/assets', svelteAssetsProxy);
 app.use('/v2', svelteProxy);
 app.use('/', vueProxy);
 
