@@ -12,7 +12,7 @@
     <a href="https://svelte.dev" target="_blank" rel="noreferrer">
       <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
     </a>
-    <a href="http://localhost:3000">Ir a vue</a>
+    <a href="/">Ir a vue</a>
   </div>
   <h1>Vite + Svelte</h1>
 

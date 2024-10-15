@@ -11,7 +11,7 @@ import HelloWorld from './components/HelloWorld.vue'
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
-    <a href="http://localhost:3000/v2">Ir a svelte</a>
+    <a href="/v2">Ir a svelte</a>
     <nav>
       <router-link style="cursor: pointer;" to="/">Home</router-link> |
       <router-link style="cursor: pointer;" to="/about">About</router-link>
