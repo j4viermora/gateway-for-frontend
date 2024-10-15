@@ -36,24 +36,12 @@ cd frontend-one && npm run build
 cd frontend-two && npm run build
 ```
 
-Se utiliza serve para levantar los frontends en modo producción.
+Se utiliza serve para levantar los frontends en modo desarrollo.
 
 ```bash
-cd frontend-one && serve --listen 3001 dist
-cd frontend-two && serve --listen 3002 dist
+cd frontend-one && npm run dev
+cd frontend-two && npm run dev
 ```
-
-Se utiliza el proxy de express para hacer el reverse proxy.
-
-En el frontend two se cambia manual mente el path de los static assets, en el archivo index.html
-y se crear una carpeta v2 y ahi dentro se mueven los assets. El path quedaria de las siguiente manera:
-
-```html
-  <script type="module" crossorigin src="/v2/assets/index-Qo-_QU8M.js"></script>
-  <link rel="stylesheet" crossorigin href="/v2/assets/index-DDqFzPXY.css">
-```
-
-Con fines educativo funciona perfectamente, lo ideal seria que al hacer build ya se cree el nombre de la carpeta. O un mejor manejo de los assets desde el backend.
 
 ## Ejecución
 
