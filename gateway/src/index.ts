@@ -8,12 +8,13 @@ dotenv.config();
 
 const app: Express = express();
 const port = process.env.PORT || 3000;
+const frontendOne = process.env.FRONTEND_ONE || "http://localhost:3001";
+const frontendTwo = process.env.FRONTEND_TWO || "http://localhost:3002";
 
 app.use(cors());
 
-
 const vueProxy = createProxyMiddleware({
-  target: "http://localhost:3001",
+  target: frontendOne,
   changeOrigin: true,
   pathRewrite: {
     "^/": "",
@@ -25,7 +26,7 @@ const vueProxy = createProxyMiddleware({
   }
 });
 const svelteProxy = createProxyMiddleware({
-  target: "http://localhost:3002",
+  target: frontendTwo,
   changeOrigin: true,
   pathRewrite: {
     "^/v2": "",
